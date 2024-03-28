@@ -1,3 +1,5 @@
 @Library('roboshop') _
 
-html ()
+env.component == "frontend"
+env.codeType == "static"
+cipipeline ()
