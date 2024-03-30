@@ -1,5 +1,5 @@
 @Library('roboshop') _
 
-env.component = "frontend-v1"
+env.component = "frontend"
 env.codeType = "static"
 cipipeline ()
