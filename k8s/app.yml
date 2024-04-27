@@ -153,7 +153,6 @@ metadata:
    name: frontend
    labels:
       app: nginx
-      project: roboshop
       service: frontend
       env: dev
 spec:
@@ -161,15 +160,14 @@ spec:
    selector:
       matchLabels:
          app: nginx
-         project: roboshop
          service: frontend
          env: dev
    template:
       metadata:
-         app: nginx
-         project: roboshop
-         service: frontend
-         env: dev
+         labels:
+            app: nginx
+            service: frontend
+            env: dev
       spec:
          serviceAccountName: frontend
          volumes:
