@@ -71,11 +71,10 @@ metadata:
 spec:
    type: LoadBalancer
    selector:
-      matchLabels:
-         app: nginx
-         project: roboshop
-         service: frontend
-         env: dev
+      app: nginx
+      project: roboshop
+      service: frontend
+      env: dev
    ports:
       - protocol: TCP
         port: 80
