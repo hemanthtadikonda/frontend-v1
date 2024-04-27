@@ -23,11 +23,18 @@ spec:
          env: dev
       spec:
          serviceAccountName: frontend
+         volumes:
+            -  name: config-volume
+               configMap:
+                  name: nginx-conf
          containers:
-            - name: nginx
-              image: nginx:1.14.2
+            - name: frontend
+              image: hemanthtadikonda/frontend:2.5.0
               ports:
                  - containerPort: 80
+              volumeMounts:
+                 -  name: config-volume
+                    mountPath: /data
               resources:
                  requests:
                     memory: "500Mi"
