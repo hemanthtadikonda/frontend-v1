@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -29,7 +30,7 @@ spec:
                   name: nginx-conf
          containers:
             - name: frontend
-              image: hemanthtadikonda/frontend:2.5.0
+              image: hemanthtadikonda/frontend:2.6.0
               ports:
                  - containerPort: 80
               volumeMounts:
